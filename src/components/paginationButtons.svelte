@@ -96,7 +96,6 @@
         } else {
           $current_page = parsed_num;
         }
-        inputted_number = $current_page.toString();
       }
     }
   };
