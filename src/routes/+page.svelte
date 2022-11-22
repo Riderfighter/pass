@@ -8,12 +8,12 @@
       <ol class="w-[80%] h-full self-center p-5 font-medium text-xl text-passe-unfocused space-y-10">
         <li class="flex flex-row justify-between items-center cursor-pointer"
             class:text-passe-focused={show_list === -1}
-            on:click={()=>{show_list=-1; curr_vault = get_all_vault(); curr_password = get_all_vault().passwords[0]}}>
+            on:click={()=>{show_list=-1; curr_vault = get_all_vault(); curr_password = curr_vault.passwords[0]}}>
           <h1>All</h1>
           <h2 class="text-sm align-middle">{get_all_vault().passwords.length}</h2>
         </li>
         <li class="flex flex-row justify-between items-center cursor-pointer" class:text-passe-focused={show_list === 0}
-            on:click={()=>{show_list = 0; curr_vault = get_favorite_vault(); if (curr_vault.passwords.length > 0) curr_password = get_favorite_vault().passwords[0]}}>
+            on:click={()=>{show_list = 0; curr_vault = get_favorite_vault(); if (curr_vault.passwords.length > 0) curr_password = curr_vault.passwords[0]}}>
           <h1>Favorites</h1>
           <h2 class="text-sm align-middle">
             <Fa icon={faStar} />
