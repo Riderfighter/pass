@@ -1,5 +1,5 @@
 <div
-  class="flex flex-row w-full h-[64px] bg-passe-dark border border-passe-border rounded-bl-lg rounded-br-lg items-center">
+  class="flex flex-row w-full h-[64px] bg-passe-dark border border-passe-border rounded-bl-lg rounded-br-lg items-center font-inter">
   <div class="flex flex-row w-full place-content-center items-center gap-x-2">
     <div
       class="flex flex-col place-content-center h-[24px] w-[24px] bg-passe-dark border border-passe-border drop-shadow-md rounded-sm text-passe-white cursor-pointer select-none"
@@ -49,8 +49,6 @@
 </div>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
-
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
@@ -61,7 +59,6 @@
   import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
   import { current_page, current_vault } from "../utils/stores.js";
 
-  // export let num_pages;
   let max_pages;
 
   let inputted_number = "1";

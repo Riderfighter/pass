@@ -1,11 +1,11 @@
-<div class="flex flex-row h-screen">
+<div class="font-inter flex flex-row h-screen">
   <div class="bg-passe-dark h-full w-1/5 border-r border-passe-border">
     <div class="flex flex-row w-full h-1/6 place-content-center place-items-center align-middle gap-1 text-[2.75rem]">
       <Fa color="#DCDCDC" icon={faVault} />
       <h1 class="place-self-center lg:text-6xl md:text-3xl text-passe-white font-inter font-bold">PASS</h1>
     </div>
     <div class="flex flex-col place-content-center w-full h-5/6">
-      <ol class="w-[80%] h-full self-center p-5 font-inter font-medium text-xl text-passe-unfocused space-y-10">
+      <ol class="w-[80%] h-full self-center p-5 font-medium text-xl text-passe-unfocused space-y-10">
         <li class="flex flex-row justify-between items-center cursor-pointer"
             class:text-passe-focused={show_list === -1}
             on:click={()=>{show_list=-1; curr_vault = get_all_vault(); curr_password = get_all_vault().passwords[0]}}>
@@ -31,10 +31,10 @@
             <h1>Secure</h1>
             <div class="flex flex-row text-passe-unfocused place-items-center gap-2">
               {#if show_list === 1}
-                <h2 class="text-sm font-sans">Hide</h2>
+                <h2 class="text-sm">Hide</h2>
                 <Fa icon={faCaretDown} translateY={-0.1} />
               {:else}
-                <h2 class="text-sm font-sans">Show</h2>
+                <h2 class="text-sm">Show</h2>
                 <Fa icon={faCaretUp} translateY={0.1} />
               {/if}
             </div>
@@ -60,10 +60,10 @@
             <h1>Vaults</h1>
             <div class="flex flex-row place-items-center gap-2">
               {#if show_list === 2}
-                <h2 class="text-sm font-sans">Hide</h2>
+                <h2 class="text-sm ">Hide</h2>
                 <Fa icon={faCaretDown} translateY={-0.1} />
               {:else}
-                <h2 class="text-sm font-sans">Show</h2>
+                <h2 class="text-sm ">Show</h2>
                 <Fa icon={faCaretUp} translateY={0.1} />
               {/if}
             </div>
@@ -88,10 +88,10 @@
             <h1>Shared</h1>
             <div class="flex flex-row place-items-center gap-2">
               {#if show_list === 3}
-                <h2 class="text-sm font-sans">Hide</h2>
+                <h2 class="text-sm ">Hide</h2>
                 <Fa icon={faCaretDown} translateY={-0.1} />
               {:else}
-                <h2 class="text-sm font-sans">Show</h2>
+                <h2 class="text-sm ">Show</h2>
                 <Fa icon={faCaretUp} translateY={0.1} />
               {/if}
             </div>
@@ -140,8 +140,6 @@
 </div>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
-
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
@@ -162,13 +160,13 @@
     faVault,
     faWallet
   } from "@fortawesome/free-solid-svg-icons";
+  import Fa from "svelte-fa";
   import Fuse from "fuse.js";
 
   import { current_password, password_list, current_vault } from "../utils/stores.js";
 
   import PasswordTableView from "../components/passwordTableView.svelte";
   import PasswordInfoView from "../components/passwordInfoView.svelte";
-  import { Fa } from "svelte-fa";
 
   import type IVault from "../interfaces/IVault";
   import type IPassword from "../interfaces/IPassword";
