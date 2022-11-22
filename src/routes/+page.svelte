@@ -170,9 +170,9 @@
 
   import type IVault from "../interfaces/IVault";
   import type IPassword from "../interfaces/IPassword";
-  import { shared_vaults } from "../mock_data/vaults/mockSharedVaults";
-  import { vaults } from "../mock_data/vaults/mockRegularVaults";
-  import { secure_vaults } from "../mock_data/vaults/mockSecureVaults";
+  import { shared_vaults } from "../mockData/vaults/mockSharedVaults";
+  import { vaults } from "../mockData/vaults/mockRegularVaults";
+  import { secure_vaults } from "../mockData/vaults/mockSecureVaults";
 
   const get_all_vault = (): IVault => {
     let passwords = [...new Set(vaults.concat(shared_vaults).concat(secure_vaults).map(v => v.passwords).flat())];
