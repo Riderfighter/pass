@@ -14,7 +14,7 @@
   </div>
   <div
     class="flex flex-col h-[640px] w-full bg-passe-dark border-x border-passe-border justify-start overflow-y-clip py-[5px]">
-    <ol class="flex flex-col w-full bg-passe-dark space-y-[16px]">
+    <ol class="flex flex-col w-full bg-passe-dark space-y-[16px] place-content-center">
       {#each $password_list.slice(($current_page - 1) * 10, (($current_page - 1) * 10) + 10) as password}
         {#if password !== undefined}
           <li class="flex flex-row min-h-[48px] w-full place-items-center justify-between cursor-pointer"
@@ -54,7 +54,7 @@
 </style>
 
 <script lang="ts">
-  import Fa from "svelte-fa";
+  import Fa from "svelte-fa/src/fa.svelte";
   import { faCopy, faSquarePlus, faStar, faUserPlus } from "@fortawesome/free-solid-svg-icons";
   import { current_page, password_list, current_password, current_vault } from "../utils/stores.js";
   import PaginationButtons from "./paginationButtons.svelte";

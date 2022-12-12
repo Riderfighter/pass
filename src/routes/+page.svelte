@@ -147,20 +147,18 @@
 
 <script lang="ts">
   // @ts-check
+  import Fa from "svelte-fa/src/fa.svelte";
   import { slide } from "svelte/transition";
   import {
     faCaretDown,
     faCaretUp,
     faLock,
     faSearch,
-    faSquarePlus,
     faStar,
     faTrash,
-    faUserPlus,
     faVault,
     faWallet
   } from "@fortawesome/free-solid-svg-icons";
-  import Fa from "svelte-fa";
   import Fuse from "fuse.js";
 
   import { current_password, password_list, current_vault } from "../utils/stores.js";

@@ -55,7 +55,7 @@
 </style>
 
 <script lang="ts">
-  import Fa from "svelte-fa";
+  import Fa from "svelte-fa/src/fa.svelte";
   import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
   import { current_page, current_vault } from "../utils/stores.js";
 

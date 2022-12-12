@@ -82,7 +82,7 @@
 </style>
 
 <script lang="ts">
+  import Fa from "svelte-fa/src/fa.svelte";
   import { faCaretUp, faCopy, faEdit, faEyeSlash, faRotate } from "@fortawesome/free-solid-svg-icons";
   import { current_password } from "../utils/stores.js";
-  import Fa from "svelte-fa";
 </script>
