@@ -54,7 +54,7 @@
 </style>
 
 <script lang="ts">
-  import { Fa } from "svelte-fa";
+  import Fa  from "svelte-fa";
   import { faCopy, faSquarePlus, faStar, faUserPlus } from "@fortawesome/free-solid-svg-icons";
   import { current_page, password_list, current_password, current_vault } from "../utils/stores.js";
   import PaginationButtons from "./paginationButtons.svelte";

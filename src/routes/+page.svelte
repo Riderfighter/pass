@@ -168,7 +168,7 @@
 
   import PasswordTableView from "../components/passwordTableView.svelte";
   import PasswordInfoView from "../components/passwordInfoView.svelte";
-  import { Fa } from "svelte-fa";
+  import Fa  from "svelte-fa";
 
   import type IVault from "../interfaces/IVault";
   import type IPassword from "../interfaces/IPassword";
